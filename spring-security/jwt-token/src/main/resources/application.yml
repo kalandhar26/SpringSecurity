@@ -1,0 +1,25 @@
+server:
+  address: localhost
+  port: 8088
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/springsecurity
+    username: root
+    password: Mysql@2022
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+#JWT
+
+application:
+  security:
+    jwt:
+      secret-key: oyRgJyM+WbMp4Ek83ct/Mi1eFcunO64l7xiHQOS3JXg=
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 #7 days
